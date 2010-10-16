@@ -19,13 +19,27 @@
             </div>
             <div style="clear:both"></div>
             <div class="header_bottom">
-                <nav>
+                <nav class="pages">
                     <ul>
                         <li>
-                            <%= link_to "Home", root_path %>
+                            <a href="<%= root_path %>">
+                                <span> Home </span>
+                            </a>
                         </li>
                         <li>
-                            <%= link_to "Events", events_path %>
+                            <a href="<%= events_path %>">
+                                <span> Events </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<%= gallery_path %>">
+                                <span> Gallery </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<%= about_path %>">
+                                <span> About </span>
+                            </a>
                         </li>
                     </ul>
                 </nav>

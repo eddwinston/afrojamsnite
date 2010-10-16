@@ -1,4 +1,5 @@
 <div>
+    <%= image_tag @event.photo.url(:small) %>
     Title: <%= @event.title %><br />
     Description: <%= @event.description %><br />
     Start Time: <%= @event.start_time %>

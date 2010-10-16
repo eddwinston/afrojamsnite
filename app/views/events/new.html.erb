@@ -1,6 +1,6 @@
 <h1>Add event</h1>
 
-<%= form_for(@event) do |f| %>
+<%= form_for(@event, :html => { :multipart => true }) do |f| %>
     <%= render 'shared/error_messages', :object => f.object %>
     <div class="field">
         <%= f.label :title %><br />
@@ -46,8 +46,11 @@
         <%= f.label :price %><br />
         <%= f.text_field :price %>
     </div>
+    <div class="field">
+        <%= f.file_field :photo %>
+    </div>
     <div class="actions">
-        <%= f.submit "Sign up" %>
+        <%= f.submit "Create" %>
     </div>
     
 <% end%>

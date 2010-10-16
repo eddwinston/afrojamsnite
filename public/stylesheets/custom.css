@@ -29,6 +29,7 @@
 
 body {
   background: white;
+  overflow-y: scroll;
 }
 
 header {
@@ -79,7 +80,6 @@ a {
 
 a:hover {
   color: #069;
-  text-decoration: underline;
 }
 
 a:visited {
@@ -109,6 +109,10 @@ nav ul li {
   padding: 0.6em 0em;
 }
 
+nav ul li a span {
+    padding: 0px 20px;
+}
+
 nav ul li a {
   padding: 0 5px;
   font-weight: bold;
@@ -119,8 +123,9 @@ nav ul li a:visited {
   color: white;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+nav.pages ul li:hover {
+  background: #ADD8E6;
+  color: gray;
 }
 
 nav#user_links {
@@ -188,10 +193,10 @@ td.sidebar {
   margin-bottom: -15px;
 }
 
-div.field input {
+div.field input , select {
     padding: 5px;
     margin: 2px 0px;
-    font-size: 18pt;
+    font-size: 10pt;
 }
 
 div label {

@@ -13,6 +13,7 @@ Afrojamsnite::Application.routes.draw do
   match '/signout', :to => 'sessions#destroy'
   
   match '/gallery', :to => 'gallery#index'
+  match '/about', :to => 'pages#about'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

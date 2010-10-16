@@ -29,7 +29,7 @@ class EventsController < ApplicationController
     @event = Event.new(params[:event])
     if @event.save
       flash[:success] = "Created event successfully"
-      redirect_to :index #@event
+      redirect_to :action => 'index' #@event
     else
       @title = "Failed to create event"
       render :new
@@ -38,11 +38,18 @@ class EventsController < ApplicationController
   
   def edit
     @title = "Edit event"
-    return "hello"
+    @event = Event.find(params[:id])
   end
   
   def update
-    
+    @event = Event.find(params[:id])
+    if @event.update_attributes(params[:event])
+      flash[:success] = "Event updated successfully"
+      redirect_to @event
+    else
+      @title = "Edit event"
+      redirect_to :action => "edit"
+    end
   end
   
   def show
