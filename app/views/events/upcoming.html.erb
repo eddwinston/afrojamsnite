@@ -1,0 +1,11 @@
+<div>
+    
+<% if @event %>
+    <% @event.each do |e| %>
+        <%= e.title %>
+    <% end%>
+<% else %>
+        No upcoming events
+<% end%>
+
+</div>

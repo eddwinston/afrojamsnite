@@ -1,4 +1,19 @@
 Afrojamsnite::Application.routes.draw do
+  
+
+  root :to => 'pages#index'
+
+  resources :events
+  resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
+  resources :gallery
+  
+  match '/signup', :to => 'users#new'
+  match '/signin', :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
+  
+  match '/gallery', :to => 'gallery#index'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

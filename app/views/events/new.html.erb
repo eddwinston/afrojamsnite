@@ -1,0 +1,53 @@
+<h1>Add event</h1>
+
+<%= form_for(@event) do |f| %>
+    <%= render 'shared/error_messages', :object => f.object %>
+    <div class="field">
+        <%= f.label :title %><br />
+        <%= f.text_field :title %>
+    </div>
+    <div class="field">
+        <%= f.label :description %><br />
+        <%= f.text_area :description %>
+    </div>
+    <div class="field">
+        <%= f.label :start_time %><br />
+        <%= f.datetime_select :start_time %>
+    </div>
+    <div class="field">
+        <%= f.label :stop_time %><br />
+        <%= f.datetime_select :stop_time %>
+    </div>
+    <div class="field">
+        <%= f.label :all_day %><br />
+        <%= f.check_box :all_day %>
+    </div>
+    <div class="field">
+        <%= f.label :venue_name %><br />
+        <%= f.text_field :venue_name %>
+    </div>
+    <div class="field">
+        <%= f.label :venue_address %><br />
+        <%= f.text_field :venue_address %>
+    </div>
+    <div class="field">
+        <%= f.label :venue_city %><br />
+        <%= f.text_field :venue_city %>
+    </div>
+    <div class="field">
+        <%= f.label :longitude %><br />
+        <%= f.text_field :longitude %>
+    </div>
+    <div class="field">
+        <%= f.label :latitude %><br />
+        <%= f.text_field :latitude %>
+    </div>
+    <div class="field">
+        <%= f.label :price %><br />
+        <%= f.text_field :price %>
+    </div>
+    <div class="actions">
+        <%= f.submit "Sign up" %>
+    </div>
+    
+<% end%>

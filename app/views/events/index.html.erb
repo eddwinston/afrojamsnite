@@ -1,0 +1,16 @@
+<div>
+<% if @events %>
+    <% @events.each do |e| %>
+    <%= link_to e.title, event_path(e) %>
+    <% end %>
+<% else %>
+    No events
+<% end %>
+</div>
+
+<% if signed_in? %>
+    <br />
+    <br />
+    <br />
+    <%= link_to "Add an event", new_event_path %>
+<% end %>
