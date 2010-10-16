@@ -3,6 +3,7 @@ class EventsController < ApplicationController
   before_filter :authenticate, :only => [:new, :edit, :update]
   
   def index
+    @title = "Events"
     #@event = Event.where(["start_time >= ?", Date.today])
     #if @event
     #  render :template => 'events/upcoming'
@@ -16,6 +17,7 @@ class EventsController < ApplicationController
   end
   
   def new
+    @title = "Create new event"
     @event = Event.new
     
     respond_to do |format|
@@ -35,6 +37,7 @@ class EventsController < ApplicationController
   end
   
   def edit
+    @title = "Edit event"
     return "hello"
   end
   
@@ -44,7 +47,7 @@ class EventsController < ApplicationController
   
   def show
     @event = Event.find(params[:id])
-    
+    @title = @event.title
     respond_to do |format|
       format.html
     end

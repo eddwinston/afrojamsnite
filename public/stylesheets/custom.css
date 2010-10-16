@@ -45,8 +45,8 @@ header div#site_title {
     float: right;
     height: 100%;
     margin: auto;
-    font-family: SegoeWP;
-    font-size: 13pt;
+    font-family: YanoneKaffeesatzT, SegoeWP;
+    font-size: 53pt;
 }
 
 header div.header_bottom {
@@ -62,7 +62,7 @@ section .nav_section {
 section {
   margin-top: 1em;
   font-size: 120%;
-  padding: 20px;
+  padding: 0px 20px;
   background: #fff;
 }
 
@@ -112,6 +112,7 @@ nav ul li {
 nav ul li a {
   padding: 0 5px;
   font-weight: bold;
+  color: white;
 }
 
 nav ul li a:visited {
@@ -187,10 +188,20 @@ td.sidebar {
   margin-bottom: -15px;
 }
 
+div.field input {
+    padding: 5px;
+    margin: 2px 0px;
+    font-size: 18pt;
+}
+
+div label {
+    font-weight: normal;
+    font-size: 14pt;
+}
+
 div.field, div.actions {
   margin-bottom: 10px;
 }
-
 
 .field_with_errors {
   margin-top: 10px;
