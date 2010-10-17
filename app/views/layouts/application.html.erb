@@ -47,9 +47,16 @@
                 <nav id="user_links">
                     <ul>
                     <% if signed_in? %>
-                        <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+                        <li>
+                            <a href="<%= signout_path %>" data-method="delete" rel="nofollow">
+                               <span>Sign out</span> 
+                            </a>
                     <% else %>
-                        <li><%= link_to "Sign in", signin_path %></li>
+                        <li>
+                            <a href="<%= signin_path %>">
+                               <span>Sign in</span> 
+                            </a>
+                        </li>
                     <% end %>
                     </ul>
                 </nav>
@@ -63,7 +70,8 @@
                     <%= value %>                
                 </div>
             <% end %>
-            <%= yield %>
+            <%= content_for?(:content) ? yield(:content) : yield %>
+            
         </section>
     </div>
 

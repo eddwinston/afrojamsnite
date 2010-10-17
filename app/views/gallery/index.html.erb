@@ -1,2 +1,7 @@
 <h1>Gallery#index</h1>
-<p>Find me in app/views/gallery/index.html.erb</p>
+
+<% if @galleries %>
+
+<% else %>
+    <h3>There are no galleries</h3>
+<% end%>

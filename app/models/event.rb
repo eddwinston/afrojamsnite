@@ -10,4 +10,8 @@ class Event < ActiveRecord::Base
                     :path => ":rails_root/public/assets/events/:id/:style/:basename.:extension"
   #validates :photo, :content_type => ['image/jpeg', 'image/png'],
   #                  :less_than => 6.megabytes
+  
+  def to_param
+    "#{id}-#{title.parameterize}"
+  end
 end

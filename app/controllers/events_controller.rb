@@ -53,7 +53,7 @@ class EventsController < ApplicationController
   end
   
   def show
-    @event = Event.find(params[:id])
+    @event = Event.find(params[:id].to_i)
     @title = @event.title
     respond_to do |format|
       format.html

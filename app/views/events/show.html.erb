@@ -1,5 +1,7 @@
+<%= content_for(:events_content) do %>
+
 <div>
-    <%= image_tag @event.photo.url(:small) %>
+    <%= image_tag @event.photo.url(:medium) %>
     Title: <%= @event.title %><br />
     Description: <%= @event.description %><br />
     Start Time: <%= @event.start_time %>
@@ -11,3 +13,5 @@
     Longitude: <%= @event.longitude %><br />
     Latitude: <%= @event.latitude %>
 </div>
+
+<% end %>

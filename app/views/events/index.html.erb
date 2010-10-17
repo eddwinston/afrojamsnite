@@ -1,16 +1,27 @@
-<div>
+<% content_for :events_content do %>
+
 <% if @events %>
     <% @events.each do |e| %>
-    <%= link_to e.title, event_path(e) %>
+        <div>
+            <a href="<%= event_path(e) %>">
+                <%= image_tag e.photo.url(:small) %>
+            </a>
+            <%= link_to e.title, event_path(e) %>
+            <% if signed_in? %>
+                <%= link_to "(Edit)", edit_event_path(e) %>
+            <% end%>
+        </div>
     <% end %>
+
 <% else %>
     No events
 <% end %>
-</div>
 
 <% if signed_in? %>
     <br />
     <br />
     <br />
     <%= link_to "Add an event", new_event_path %>
+<% end %>
+
 <% end %>
