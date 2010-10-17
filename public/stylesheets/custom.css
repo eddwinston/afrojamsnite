@@ -61,7 +61,7 @@ header div#site_title {
 }
 
 header div#header_top {
-    background: url('/images/spikes.png') no-repeat right bottom;
+    background: url('/images/header_spikes.png') no-repeat right bottom;
 }
 
 header div.header_bottom {
