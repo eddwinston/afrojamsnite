@@ -57,30 +57,30 @@ h3
 #topWrapper
 {
 	background: transparent url(/images/bg.gif) repeat scroll 0 0;
-	height: 620px;
+	height: 720px;
 	min-width: 990px;
 	}
 /*class*/
 .topGradient
 {
 	background-image: -moz-radial-gradient(transparent, #111111);
-	height: 620px;
+	height: 720px;
 	}
 .topSpikes
 {
 	background: transparent url(/images/spikes.png) repeat-x scroll left bottom;
-	height: 620px;
+	height: 720px;
 	}
 .topContentWrapper
 {	
 	background: transparent url(/images/mid-spikes.png) repeat-x scroll left bottom;
-	height: 620px;
+	height: 720px;
 	width: 990px;
 	margin: 0 auto;
 	}
 .logo
 {
-	height: 600px;
+	height: 700px;
 	width: 600px;
 	float: left;
 	background: transparent url(/images/logo_large.png) no-repeat scroll 0 0;
