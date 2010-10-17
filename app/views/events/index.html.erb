@@ -3,13 +3,16 @@
 <% if @events %>
     <% @events.each do |e| %>
         <div>
-            <a href="<%= event_path(e) %>">
+            <a href="<%= event_path(e) %>" class="float_left">
                 <%= image_tag e.photo.url(:small) %>
             </a>
+            <div class="float_left">
             <%= link_to e.title, event_path(e) %>
             <% if signed_in? %>
                 <%= link_to "(Edit)", edit_event_path(e) %>
             <% end%>
+            </div>
+            <div class="clear_both"></div>
         </div>
     <% end %>
 

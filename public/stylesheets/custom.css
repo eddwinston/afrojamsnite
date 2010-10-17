@@ -60,6 +60,10 @@ header div#site_title {
     color: GoldenRod;
 }
 
+header div#header_top {
+    background: url('/images/spikes.png') no-repeat right bottom;
+}
+
 header div.header_bottom {
     background: transparent;/*#00467F*/;
     font-family: YanoneKaffeesatzT;
@@ -138,7 +142,7 @@ nav ul li.current {
     border-bottom: 3px solid GoldenRod;
 }
 nav ul li a span {
-    padding: 5px 20px;
+    padding: 0px 20px;
     display: block;
     float: left;
     color: GoldenRod;

@@ -32,6 +32,10 @@ class User < ActiveRecord::Base
     (user && user.salt == cookie_salt) ? user : nil
   end
   
+  def to_param
+    "#{id}-#{name.parameterize}"
+  end
+  
   private #-------------------------
   
     def encrypt_password

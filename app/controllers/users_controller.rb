@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   end
   
   def show
+    @current_menu = "profile"
     @user = User.find(params[:id])
     @title = @user.name
   end
@@ -42,6 +43,7 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
+  
   
   private #----------------
     
