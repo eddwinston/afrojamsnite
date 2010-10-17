@@ -3,6 +3,7 @@ class EventsController < ApplicationController
   before_filter :authenticate, :only => [:new, :edit, :update]
   
   def index
+    @current_menu = "events"
     @title = "Events"
     #@event = Event.where(["start_time >= ?", Date.today])
     #if @event
@@ -26,6 +27,7 @@ class EventsController < ApplicationController
   end
   
   def create
+    @current_menu = "events"
     @event = Event.new(params[:event])
     if @event.save
       flash[:success] = "Created event successfully"
@@ -37,11 +39,13 @@ class EventsController < ApplicationController
   end
   
   def edit
+    @current_menu = "events"
     @title = "Edit event"
     @event = Event.find(params[:id])
   end
   
   def update
+    @current_menu = "events"
     @event = Event.find(params[:id])
     if @event.update_attributes(params[:event])
       flash[:success] = "Event updated successfully"
@@ -53,6 +57,7 @@ class EventsController < ApplicationController
   end
   
   def show
+    @current_menu = "events"
     @event = Event.find(params[:id].to_i)
     @title = @event.title
     respond_to do |format|

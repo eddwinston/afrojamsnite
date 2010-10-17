@@ -39,10 +39,11 @@ h1, h2, h3, h4, h5, h6 {
 body {
   background: white;
   overflow-y: scroll;
+  background: url('/images/bg.gif') repeat;
 }
 
 header {
-  padding: 5px 20px;
+  padding: 5px 0px;
   margin-top: 1em;
 }
 
@@ -52,15 +53,15 @@ header img {
 }
 
 header div#site_title {
-    float: right;
     height: 100%;
-    margin: auto;
+    padding: 50px 0px;
     font-family: YanoneKaffeesatzT, SegoeWP;
     font-size: 53pt;
+    color: GoldenRod;
 }
 
 header div.header_bottom {
-    background: #00467F;
+    background: transparent;/*#00467F*/;
     font-family: YanoneKaffeesatzT;
     font-size: 15pt;
 }
@@ -70,9 +71,9 @@ section .nav_section {
 }
 
 section {
-  margin-top: 1em;
+  margin-top: 0.5em;
   font-size: 120%;
-  padding: 0px 20px;
+  padding: 20px 20px;
   background: #fff;
 }
 
@@ -130,17 +131,23 @@ nav ul li {
   list-style-type: none;
   display: inline-block;
   padding: 0em 0em;
+  border-bottom: 3px solid transparent;
 }
 
+nav ul li.current {
+    border-bottom: 3px solid GoldenRod;
+}
 nav ul li a span {
-    padding: 15px 20px;
+    padding: 5px 20px;
     display: block;
     float: left;
+    color: GoldenRod;
+    font-weight: normal;
+    font-size: 30px;
 }
 
 nav ul li a {
   padding: 0 5px;
-  font-weight: bold;
   color: white;
 }
 
@@ -149,7 +156,8 @@ nav ul li a:visited {
 }
 
 nav.pages ul li:hover {
-  background: #ADD8E6;
+  /*background: #ADD8E6;*/
+  border-bottom: 3px solid GoldenRod;
   color: gray;
 }
 
