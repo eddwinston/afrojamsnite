@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="author" content="eddwinston@gmail.com, robliuning@gmail.com" />
+
+<%= javascript_include_tag "jquery", "global" %>
+<link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+<title><%= title %></title>
+</head>
+<body>
+	<div id="topWrapper">
+		<div class="topGradient">
+			<div class="topSpikes">
+				<div class="topContentWrapper">
+					<div class="topContent">
+						<div class="logo">
+						</div>
+						<div class="description">
+							<div id="readMore" class="green button">
+								<a href="/events">Read More</a>
+							</div>
+	    					<span class="textVersion" id="layer1"></span>
+	    					<span class="textVersion" id="layer2"></span>
+						</div>
+					</div>
+					<div>
+					   <%= yield %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

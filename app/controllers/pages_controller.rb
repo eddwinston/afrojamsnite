@@ -4,6 +4,8 @@ class PagesController < ApplicationController
     @current_menu = 'home'
     @title = "Home"
     @event = Event.where('start_time >= ?', Date.today)
+    
+    render :layout => 'home'
   end
   
   def about
