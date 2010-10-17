@@ -2,12 +2,18 @@
 
 <% if @events %>
     <% @events.each do |e| %>
-        <div>
-            <a href="<%= event_path(e) %>" class="float_left">
-                <%= image_tag e.photo.url(:small) %>
+        <div class="event_list_item">
+            <div class="float_left event_list_item_image">
+                <a href="<%= event_path(e) %>">
+                    <%= image_tag e.photo.url(:small) %>
             </a>
-            <div class="float_left">
-            <%= link_to e.title, event_path(e) %>
+            </div>
+            <div class="float_left event_data">
+            <%= link_to e.title, event_path(e) %> <br />
+            <span class="event_date">
+                <span><%= e.start_time %></span>
+            </span><br />
+            <span class="event_description"><%= e.description %></span>
             <% if signed_in? %>
                 <%= link_to "(Edit)", edit_event_path(e) %>
             <% end%>

@@ -14,6 +14,7 @@ Afrojamsnite::Application.routes.draw do
   
   match '/gallery', :to => 'gallery#index'
   match '/about', :to => 'pages#about'
+  match '/feedback', :to => 'pages#feedback'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

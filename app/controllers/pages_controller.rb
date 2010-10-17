@@ -8,7 +8,11 @@ class PagesController < ApplicationController
   
   def about
     @current_menu = 'about'
-    @title = "About"
     @title = "About Afro Jams Nite"
+    @feedback = Feedback.new
+  end
+  
+  def feedback
+    UserMailer.feedback_mail(feedback)
   end
 end

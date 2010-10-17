@@ -43,8 +43,8 @@ body {
 }
 
 header {
-  padding: 5px 0px;
-  margin-top: 1em;
+  padding: 0px;
+  margin-top: 0em;
 }
 
 header img {
@@ -151,7 +151,7 @@ nav ul li a span {
 }
 
 nav ul li a {
-  padding: 0 5px;
+  padding: 0px;
   color: white;
 }
 
@@ -159,7 +159,7 @@ nav ul li a:visited {
   color: white;
 }
 
-nav.pages ul li:hover {
+nav.pages ul li:hover, nav ul li:hover {
   /*background: #ADD8E6;*/
   border-bottom: 3px solid GoldenRod;
   color: gray;
@@ -176,6 +176,61 @@ nav#user_links {
 nav#user_links li a:hover {
     color: white;
 }
+
+.subtitle {
+    color: GoldenRod;
+}
+
+.event_list_item {
+    border: 1px solid transparent;
+    border-bottom: 1px dotted Purple;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.event_list_item:hover {
+    background: none repeat scroll 0 0 #FFFFEE;
+}
+
+.event_list_item_image {
+    padding: 10px 5px;
+}
+
+div.event_data {
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 475px;
+}
+
+.event_data a:hover {
+    color: Purple;
+}
+
+.event_date {
+    padding-right: 5px;
+    font-size: 15px;
+    font-style: italic;
+    color: GoldenRod;
+}
+.event_description {
+    font-size: 15px;
+    display: block;
+    line-height: 18px;
+}
+
+/* About page */
+div.about_left {
+    border-right: 1px solid GoldenRod;
+}
+
+div.about_right, div.about_left {
+    width: 420px;
+}
+
+.about_right form input[type="text"], .about_right form textarea {
+    width: 400px;
+}
+
 
 /* Sign up button */
 

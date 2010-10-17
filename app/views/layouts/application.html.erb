@@ -19,65 +19,9 @@
 <body>
     <div id="container">
         <header>
-            <div id="header_top">
-                <a href="<%= root_path %>" class="float_left">
-                    <img src="/images/logo.png" alt="Afro Jams Nite">
-                </a>
-                <!--<div id="site_title" class="float_right">
-                    Afro Jams Nite
-                </div> -->
-                <div class="clear_both"></div>
-            </div>
-            <div style="clear:both"></div>
-            <div class="header_bottom round">
-                <nav class="pages">
-                    <ul>
-                        <li <%= "class='current'" if @current_menu == 'home' %>>
-                            <a href="<%= root_path %>">
-                                <span> Home </span>
-                            </a>
-                        </li>
-                        <li <%= "class='current'" if @current_menu == 'events' %>>
-                            <a href="<%= events_path %>">
-                                <span> Events </span>
-                            </a>
-                        </li>
-                        <li <%= "class='current'" if @current_menu == 'gallery' %>>
-                            <a href="<%= gallery_path %>">
-                                <span> Gallery </span>
-                            </a>
-                        </li>
-                        <li <%= "class='current'" if @current_menu == 'about' %>>
-                            <a href="<%= about_path %>">
-                                <span> About </span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                
-                <nav id="user_links">
-                    <ul>
-                    <% if signed_in? %>
-                        <li <%= "class='current'" if @current_menu == 'profile' %>>
-                            <a href="<%= user_path(current_user) %>">
-                                <span>Profile</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<%= signout_path %>" data-method="delete" rel="nofollow">
-                               <span>Sign out</span> 
-                            </a>
-                    <% else %>
-                        <li>
-                            <a href="<%= signin_path %>">
-                               <span>Sign in</span> 
-                            </a>
-                        </li>
-                    <% end %>
-                    </ul>
-                </nav>
-                <div style="clear:both"></div>
-            </div>
+            <%= render 'layouts/header_top' %>
+            
+            <%= render 'layouts/header_bottom'%>
         </header>
         
         <section class="round">
