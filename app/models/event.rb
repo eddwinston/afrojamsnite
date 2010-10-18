@@ -6,10 +6,12 @@ class Event < ActiveRecord::Base
   
   has_attached_file :photo, 
                     :styles => { :small => "150x150>", :medium => "400x400>" },
-                    :url => "/assets/events/:id/:style/:basename.:extension",
-                    :path => ":rails_root/public/assets/events/:id/:style/:basename.:extension"
-  #validates :photo, :content_type => ['image/jpeg', 'image/png'],
-  #                  :less_than => 6.megabytes
+                    :storage => :s3, 
+                    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml", 
+                    :path => "/:style/:filename"
+                    
+                    #:url => "/assets/events/:id/:style/:basename.:extension",
+                    #:path => ":rails_root/public/assets/events/:id/:style/:basename.:extension"
   
   def to_param
     "#{id}-#{title.parameterize}"
