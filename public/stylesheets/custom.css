@@ -23,10 +23,13 @@
 .float_left { float: left; }
 .float_right { float: right; }
 .italic { font-style: italic; }
+.bold { font-weight: bold; }
 
 h1, h2, h3, h4, h5, h6 {
     color: #666666;
 }
+
+p { margin: 0px; }
 
 #container {
   width: 900px;
@@ -243,11 +246,49 @@ div.about_right, div.about_left {
     font-family: 20px;
 }
 
+.event_detail .description {
+    font-family: SegoeWP;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.event_detail .event_detail_venue_title {
+    -moz-border-radius:    10px;
+    -webkit-border-radius: 10px;
+    border-radius:         10px;
+    background: #E5F1FA;
+    border: 1px solid #D5D6D7;
+}
+
+.event_detail .event_detail_venue_title .title_text {
+    display: block;
+    padding: 0 15px;
+    color: purple;
+    font-weight: normal;
+    font-size: 17px;
+    font-family: SegoeWP;
+}
+
+.event_detail .event_detail_venue {
+    padding: 20px 15px;
+    background: #F3F2EB;
+    border-top: 1px solid #D5D6D7;
+    -moz-border-radius:    0px 0px 10px 10px;
+    -webkit-border-radius: 0px 0px 10px 10px;
+    border-radius:         0px 0px 10px 10px;
+}
+
 .event_detail .edf {
     font-style: italic;
     font-family: YanoneKaffeesatzT;
     font-size: 18px;
     color: GoldenRod;
+}
+
+div.map_wrap {
+    padding: 7px;
+    background: #E5F1FA;
 }
 
 
@@ -275,11 +316,13 @@ a.signup_button {
 }
 
 footer {
-  text-align: center;
-  margin-top: 10px;
-  width: 710px;
-  margin-left: auto;
-  margin-right: auto;
+    background: white;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    font-size: 12pt;
 }
 
 footer nav {
@@ -372,5 +415,13 @@ ul.users {
 
 .users li {
   list-style: none;
+}
+
+/*------ login area ---*/
+div#login_area {
+    margin: 0px auto;
+    padding: 20px;
+    width: 275px;
+    background: #E5F1FA;
 }
 

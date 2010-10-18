@@ -40,27 +40,30 @@
         <div class="float_left" style="padding-right: 30px">
         <%= image_tag @event.photo.url(:medium) %>
         </div>
-        <div class="float_left">
-            <span class="desc">Venue</span><br />
-            <span class="desc"><%= @event.venue_name %></span><br />
-            <span class="desc"><%= @event.venue_address %>,</span>
-            <span class="desc"><%= @event.venue_city %>.</span><br /><br />
-            <span class="desc">Price:&nbsp;</span><span class="desc edf italic" style="color:purple; font-weight: bold;"><%= @event.price %> euro.</span>
+        <div class="round float_left event_detail_venue_title">
+            <span class="desc title_text">Venue</span>
+            <div class="event_detail_venue">
+                <span class="desc"><%= @event.venue_name %></span><br />
+                <span class="desc"><%= @event.venue_address %>,</span>
+                <span class="desc"><%= @event.venue_city %>.</span><br /><br />
+                <span class="desc">Price:&nbsp;</span><span class="desc edf italic" style="color:purple; font-weight: bold;"><%= @event.price %> euro.</span>
+            </div>
         </div>
         <div class="clear_both"></div>
     </div>
     <p class="title"><%= @event.title %></p>
     
-    <p class="desc">
+    <p class="description">
         <%= @event.description %><br />
     </p>
     <p>
         <span class="desc">Start Time:</span> <span class="edf"><%= @event.start_time %></span>
     </p>
+    <br />
 </div>
 
-<div id="map_canvas" style="width: 600px; height: 500px;">
-    
+<div class="round map_wrap">
+    <div id="map_canvas" class="round" style="height: 500px;"></div>
 </div>
 
 <% end %>

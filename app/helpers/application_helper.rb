@@ -10,4 +10,8 @@ module ApplicationHelper
     end
   end
   
+  def current_year
+    Date.today.year
+  end
+  
 end

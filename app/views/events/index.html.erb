@@ -3,6 +3,9 @@
 <% end %>
 
 <% content_for :events_content do %>
+<p style="margin-bottom:5px">
+    <span style="display: block; padding-bottom: 0px">Upcoming events</span><hr />
+</p>
 
 <% if @events %>
     <% @events.each do |e| %>
