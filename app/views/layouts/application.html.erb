@@ -5,7 +5,7 @@
   <%= javascript_include_tag :all %>
   <%= csrf_meta_tag %>
   <%= render 'layouts/stylesheets' %>
-  <%= content_for?(:head) ? yield(:head): yield %>
+  <%= yield(:head) if content_for?(:head) %>
   <script>
     $(document).ready(function() {
         $('.media').media({ 
