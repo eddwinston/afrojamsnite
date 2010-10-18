@@ -1,15 +1,16 @@
 development:
-    bucket: myappdevelopment
-    access_key_id: <your key>
-    secret_access_key: <your key>
+  bucket: afrojamsnite_bucket
+  access_key_id: 
+  secret_access_key: 
 
 test:
-    bucket: myapptest
-    access_key_id: <your key>
-    secret_access_key: <your key>
+  bucket: afrojamsnite_test_bucket
+  access_key_id: 
+  secret_access_key: 
 
 production:
-    bucket: myapp
-    access_key_id: <your key>
-    secret_access_key: <your key>
+  bucket: afrojamsnite_bucket
+  access_key_id: 
+  secret_access_key: 
+
 

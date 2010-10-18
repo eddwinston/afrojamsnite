@@ -4,14 +4,23 @@
 </script>
 <script type="text/javascript">
   function initialize() {
-    var latlng = new google.maps.LatLng(<%= @event.latitude %>, <%= @event.longitude %>);
-    var myOptions = {
-      zoom: 8,
-      center: latlng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    var map = new google.maps.Map(document.getElementById("map_canvas"),
-        myOptions);
+      var myLatlng = new google.maps.LatLng(
+          <%= @event.latitude %>, <%= @event.longitude %>);
+          
+      var myOptions = {
+        zoom: 8,
+        center: myLatlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+
+      var map = new google.maps.Map(
+          document.getElementById("map_canvas"), myOptions);      
+
+      var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title:"<%= @event.title %>"
+      }); 
   }
   
   $(document).ready(function() {
@@ -23,23 +32,35 @@
 <% end %>
 
 <%= content_for(:events_content) do %>
-
-<div>
-    <%= image_tag @event.photo.url(:medium) %>
-    Title: <%= @event.title %><br />
-    Description: <%= @event.description %><br />
-    Start Time: <%= @event.start_time %>
+<p>
+    <span style="display: block; padding-bottom: 10px">Upcoming event</span><hr />
+</p>
+<div class="event_detail">
+    <div>
+        <div class="float_left" style="padding-right: 30px">
+        <%= image_tag @event.photo.url(:medium) %>
+        </div>
+        <div class="float_left">
+            <span class="desc">Venue</span><br />
+            <span class="desc"><%= @event.venue_name %></span><br />
+            <span class="desc"><%= @event.venue_address %>,</span>
+            <span class="desc"><%= @event.venue_city %>.</span><br /><br />
+            <span class="desc">Price:&nbsp;</span><span class="desc edf italic" style="color:purple; font-weight: bold;"><%= @event.price %> euro.</span>
+        </div>
+        <div class="clear_both"></div>
+    </div>
+    <p class="title"><%= @event.title %></p>
+    
+    <p class="desc">
+        <%= @event.description %><br />
+    </p>
+    <p>
+        <span class="desc">Start Time:</span> <span class="edf"><%= @event.start_time %></span>
+    </p>
 </div>
 
 <div id="map_canvas" style="width: 600px; height: 500px;">
     
-</div>
-
-<div>
-    <hr />
-    Show map here <br />
-    Longitude: <%= @event.longitude %><br />
-    Latitude: <%= @event.latitude %>
 </div>
 
 <% end %>

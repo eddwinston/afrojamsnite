@@ -4,8 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="author" content="eddwinston@gmail.com, robliuning@gmail.com" />
 
-<%= javascript_include_tag "jquery", "global" %>
-<%= render 'layouts/stylesheets' %>
+<%= javascript_include_tag "jquery", "easySlider", "global" %>
+<%= stylesheet_link_tag "style" %>
 
 <title><%= title %></title>
 </head>
@@ -16,7 +16,7 @@
 				<div class="topContentWrapper">
 					<div class="topContent">
 					    <header>
-					        <%= render 'layouts/header_bottom'%>
+					        <%= render 'layouts/header_bottom' %>
 					    </header>
 						<div class="logo">
 						</div>
@@ -28,11 +28,21 @@
 	    					<span class="textVersion" id="layer2"></span>
 						</div>
 					</div>
-					<div>
-					   <%= yield %>
-					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div id="downWrapper">
+		<div class="downContent">
+			<div id="slideShow">
+			<ul>				
+				<li><a href="#"><img src="/images/slideshow/01.jpg" alt="slideshow" /></a></li>
+				<li><a href="#"><img src="/images/slideshow/02.jpg" alt="slideshow" /></a></li>
+				<li><a href="#"><img src="/images/slideshow/03.jpg" alt="slideshow" /></a></li>
+				<li><a href="#"><img src="/images/slideshow/04.jpg" alt="slideshow" /></a></li>
+				<li><a href="#"><img src="/images/slideshow/05.jpg" alt="slideshow" /></a></li>	 	
+			</ul>
+			</div>	
 		</div>
 	</div>
 </body>

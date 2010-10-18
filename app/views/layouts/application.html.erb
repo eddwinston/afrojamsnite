@@ -2,20 +2,12 @@
 <html>
 <head>
   <title><%= title %></title>
-  <%= javascript_include_tag :all %>
+  <%= javascript_include_tag "jquery" %>
   <%= csrf_meta_tag %>
   <%= render 'layouts/stylesheets' %>
+  <%= javascript_include_tag :defaults %>
+
   <%= yield(:head) if content_for?(:head) %>
-  <script>
-    $(document).ready(function() {
-        $('.media').media({ 
-            width:     40, 
-            height:    40, 
-            autoplay:  false, 
-            src:       '/audio/Cutlass.mp3', 
-        });
-    });
-  </script>
 </head>
 <body>
     <div id="container">

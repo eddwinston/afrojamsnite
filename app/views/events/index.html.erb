@@ -15,7 +15,12 @@
             </span><br />
             <span class="event_description"><%= e.description %></span>
             <% if signed_in? %>
-                <%= link_to "(Edit)", edit_event_path(e) %>
+                <span>
+                    (<%= link_to "edit", edit_event_path(e) %> |
+                    <%= link_to "delete", event_path(e), :method => :delete, :confirm => "You sure?", :title => "Delete #{e.title}" %>
+                    
+                    )
+                </span>
             <% end%>
             </div>
             <div class="clear_both"></div>

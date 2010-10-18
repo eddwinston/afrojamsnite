@@ -22,6 +22,7 @@
 .clear_both { clear: both; }
 .float_left { float: left; }
 .float_right { float: right; }
+.italic { font-style: italic; }
 
 h1, h2, h3, h4, h5, h6 {
     color: #666666;
@@ -61,7 +62,7 @@ header div#site_title {
 }
 
 header div#header_top {
-    background: url('/images/header_spikes.png') no-repeat right bottom;
+    background: url('/images/header.png') no-repeat right bottom;
 }
 
 header div.header_bottom {
@@ -229,6 +230,24 @@ div.about_right, div.about_left {
 
 .about_right form input[type="text"], .about_right form textarea {
     width: 400px;
+}
+
+.event_detail .title {
+    font-family: YanoneKaffeesatzL;
+    font-size: 40px;
+    padding: 20px 0px;
+}
+
+.event_detail .desc {
+    font-family: YanoneKaffeesatzT;
+    font-family: 20px;
+}
+
+.event_detail .edf {
+    font-style: italic;
+    font-family: YanoneKaffeesatzT;
+    font-size: 18px;
+    color: GoldenRod;
 }
 
 
