@@ -43,7 +43,7 @@ p { margin: 0px; }
 body {
   background: white;
   overflow-y: scroll;
-  background: url('/images/bg.gif') repeat;
+  background: url('/images/background.gif') repeat;
 }
 
 header {
@@ -425,3 +425,8 @@ div#login_area {
     background: #E5F1FA;
 }
 
+
+/****** Ads */
+.ads_banner_bottom {
+    padding-top: 30px;
+}
